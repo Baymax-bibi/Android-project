@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_character_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/maring_padding_140"
+        app:cardCornerRadius="@dimen/maring_padding_15"
+        android:layout_centerInParent="true"
+        app:cardElevation="@dimen/maring_padding_5"
+        android:layout_marginBottom="@dimen/maring_padding_15"
+        android:layout_marginRight="@dimen/maring_padding_15"
+        android:layout_marginTop="@dimen/maring_padding_15">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/img_character"
+                android:layout_width="@dimen/maring_padding_100"
+                android:layout_height="@dimen/maring_padding_100"
+                android:layout_marginLeft="@dimen/maring_padding_15"
+                android:layout_centerVertical="true"
+                android:src="@drawable/slider2"/>
+            <RelativeLayout
+                android:id="@+id/rl_summary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/img_character"
+                android:layout_marginLeft="@dimen/maring_padding_10">
+
+                <TextView
+                    android:id="@+id/tv_character_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_blue"/>
+
+                <TextView
+                    android:id="@+id/tv_character_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_10"
+                    android:fontFamily="@font/alike"
+                    android:text="@string/problem1"
+                    android:textSize="@dimen/maring_padding_20"
+                    android:textColor="@color/dark_character_bg" />
+                <TextView
+                    android:id="@+id/tv_character_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_below="@id/tv_character_name"
+                    android:textSize="@dimen/maring_padding_12"
+                    android:text="@string/what_lorem"/>
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State: Fuse request sent"
+                    android:layout_below="@id/tv_character_intro"
+                    android:layout_marginTop="@dimen/maring_padding_5"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "838282066380",
+    "firebase_url": "https://butterone-b1e49.firebaseio.com",
+    "project_id": "butterone-b1e49",
+    "storage_bucket": "butterone-b1e49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838282066380:android:3025e6365cb8def5c88569",
+        "android_client_info": {
+          "package_name": "rayan.crypto.rayancrypto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838282066380-eb6dgq93br4f1lu18u09e2oiqavnr4mr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "rayan.crypto.rayancrypto",
+            "certificate_hash": "0a5acc7dba5b2b765d20e3c9b872df49fb0279f9"
+          }
+        },
+        {
+          "client_id": "838282066380-5p3sla2eljqoffb93ghb8ecl92o4ot3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsI83muYQyg6pWFKEoO2m_q0gFenuFvBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838282066380-5p3sla2eljqoffb93ghb8ecl92o4ot3f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/button_margin_30"
+    android:paddingBottom="@dimen/button_margin_30"
+    android:paddingLeft="@dimen/button_margin_20"
+    android:paddingRight="@dimen/button_margin_20"
+    android:background="@drawable/background_gradient_primary_t">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/item_fav_avatar"
+        android:layout_width="@dimen/margin_60"
+        android:layout_height="@dimen/margin_60"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        app:civ_border="false"
+        android:src="@drawable/baseline_person_white_48dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_fav_avatar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/button_margin_20"
+        android:layout_toLeftOf="@id/item_fav_img_star"
+        android:layout_marginRight="@dimen/spacing_15"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/item_fav_user_name"
+            style="@style/title_white_h7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="@string/username" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_fav_img_star"
+        android:layout_width="@dimen/button_margin_25"
+        android:layout_height="@dimen/button_margin_25"
+        android:layout_marginRight="@dimen/button_margin_20"
+        android:src="@drawable/ic_star"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

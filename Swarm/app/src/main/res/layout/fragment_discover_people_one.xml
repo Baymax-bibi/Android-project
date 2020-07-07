@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient_primary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin_60">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:layout_marginTop="@dimen/button_margin_50"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header_title_discover"
+                layout="@layout/layout_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/connectFB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/button_margin_30"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="@string/CONNECTFB"
+                android:textSize="14sp"
+                android:textColor="@color/text_color_white_100" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_discover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_header"
+            android:layout_marginLeft="@dimen/button_margin_20"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/button_margin_5"
+            android:gravity="center"
+            android:verticalSpacing="@dimen/button_margin_5" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shape_drawable"/>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/bottomapppbartint"
+        app:fabCradleDiameter="70dp"
+        app:hideOnScroll="false">
+
+        <LinearLayout
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_menu_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:contentDescription="TODO" />
+
+            <ImageView
+                android:id="@+id/settingButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_dial"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/teamButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_people_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <ImageView
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_search_24"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/text_color_white_100"
+        app:srcCompat="@drawable/icon_chevron_up"
+        app:layout_anchor="@id/bar"/>
+<!--    <FrameLayout-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/default_spacing_10">
+
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_spacing_10"
+        android:text="0"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:textSize="14sp"
+        style="@style/title_white_h6_thick"/>
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_80"
+        android:text="gabriel"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:textSize="14sp"
+        style="@style/title_white_h6_thick"/>
+    <TextView
+        android:id="@+id/tv_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:textSize="14sp"
+        style="@style/title_white_h6_thick"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/button_margin_20"/>
+</RelativeLayout>

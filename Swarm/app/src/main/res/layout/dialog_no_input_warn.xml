@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_20"
+        android:layout_marginLeft="@dimen/button_margin_20"
+        android:layout_marginRight="@dimen/button_margin_20"
+        android:text="@string/NOINPUT_TITLE"
+        android:fontFamily="@font/futura_bold"
+        android:textColor="@color/secondary_color_500"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="@dimen/button_margin_20"
+        android:layout_marginLeft="@dimen/button_margin_20"
+        android:layout_marginRight="@dimen/button_margin_20"
+        android:layout_marginBottom="@dimen/margin_60"
+        android:textColor="@color/secondary_color_400"
+        android:text="@string/NOINPUT_CONTENT"
+        android:textSize="18sp"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/go_back"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/GOBACK"-->
+<!--        android:layout_below="@id/tv_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginRight="@dimen/button_margin_30"-->
+<!--        android:textColor="@color/primary_color_300"/>-->
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/spacing_15"
+        android:paddingRight="@dimen/spacing_15"
+        android:background="@drawable/log_rounded_border"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/default_spacing_10"
+        android:layout_marginBottom="@dimen/default_spacing_10">
+
+    <TextView
+            android:id="@+id/positionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/spacing_15"
+            android:layout_marginBottom="@dimen/spacing_15"
+            style="@style/title_white_h5"
+            android:layout_centerVertical="true"/>
+
+    <View
+            android:id="@+id/positionDivider"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/positionText"
+            android:layout_marginRight="@dimen/default_spacing_10"
+            android:layout_marginLeft="@dimen/default_spacing_10"
+            android:background="@color/text_color_white_100"
+            android:layout_centerVertical="true"/>
+
+    <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/positionDivider"
+            android:layout_toStartOf="@id/votesDivider"
+            android:layout_marginTop="@dimen/spacing_15"
+            android:layout_marginBottom="@dimen/spacing_15"
+            tools:text="Debt Collector"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/title_white_h5"
+            android:layout_centerVertical="true"/>
+
+    <View
+            android:id="@+id/votesDivider"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/ly_right"
+            android:layout_marginRight="@dimen/default_spacing_10"
+            android:layout_marginLeft="@dimen/default_spacing_10"
+            android:background="@color/text_color_white_100"
+            android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:id="@+id/ly_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_swarm_re"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/swarm_title"
+            style="@style/body_white_1"
+            android:layout_marginTop="@dimen/button_margin_5"/>
+
+        <TextView
+            android:id="@+id/votesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            tools:text="14/19"
+            style="@style/body_white_1"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

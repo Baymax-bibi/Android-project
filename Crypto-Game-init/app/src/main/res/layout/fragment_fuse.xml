@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_man"
+            android:layout_width="@dimen/maring_padding_160"
+            android:layout_height="@dimen/maring_padding_200"
+            android:layout_marginTop="@dimen/maring_padding_30"
+            android:layout_marginLeft="@dimen/maring_padding_10">
+            <View
+                android:id="@+id/view_man_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/maring_padding_120"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_item_character_blue"/>
+            <ImageView
+                android:id="@+id/img_man_gender"
+                android:layout_width="@dimen/maring_padding_20"
+                android:layout_height="@dimen/maring_padding_20"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@id/view_man_bg"
+                android:src="@drawable/icon_man"
+                android:tint="@color/dark_character_bg"/>
+            <ImageView
+                android:id="@+id/img_man_character"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/maring_padding_100"
+                android:layout_marginLeft="@dimen/maring_padding_20"
+                android:layout_marginRight="@dimen/maring_padding_20"
+                android:scaleType="fitXY"
+                android:src="@drawable/character"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_man_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/maring_padding_5"
+                android:layout_marginLeft="@dimen/maring_padding_1"
+                android:layout_marginRight="@dimen/maring_padding_1"
+                android:background="@color/white"
+                android:layout_below="@id/img_man_character">
+                <TextView
+                    android:id="@+id/tv_man_character_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_character_bg"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_man_item_gen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/maring_padding_5"
+                android:layout_below="@id/rl_man_price">
+                <ImageView
+                    android:id="@+id/img_man_item_gen"
+                    android:layout_width="@dimen/maring_padding_15"
+                    android:layout_height="@dimen/maring_padding_15"
+                    android:src="@drawable/sandwatch"
+                    android:layout_marginLeft="@dimen/maring_padding_15"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/white"/>
+                <TextView
+                    android:id="@+id/tv_man_character_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Age : 0"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_man_item_swift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_5"
+                android:layout_below="@id/rl_man_item_gen">
+                <ImageView
+                    android:id="@+id/img_man_item_swift"
+                    android:layout_width="@dimen/maring_padding_15"
+                    android:layout_height="@dimen/maring_padding_15"
+                    android:src="@drawable/alarm"
+                    android:layout_marginLeft="@dimen/maring_padding_15"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/white"/>
+                <TextView
+                    android:id="@+id/tv_man_character_dropping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Dropping : 1 h"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_woman"
+            android:layout_width="@dimen/maring_padding_160"
+            android:layout_height="@dimen/maring_padding_200"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/maring_padding_30"
+            android:layout_marginRight="@dimen/maring_padding_10">
+            <View
+                android:id="@+id/view_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/maring_padding_120"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_item_character_blue"/>
+            <ImageView
+                android:id="@+id/img_gender"
+                android:layout_width="@dimen/maring_padding_20"
+                android:layout_height="@dimen/maring_padding_20"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@id/view_bg"
+                android:src="@drawable/icon_man"
+                android:tint="@color/dark_character_bg"/>
+            <ImageView
+                android:id="@+id/img_character"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/maring_padding_100"
+                android:layout_marginLeft="@dimen/maring_padding_20"
+                android:layout_marginRight="@dimen/maring_padding_20"
+                android:scaleType="fitXY"
+                android:src="@drawable/character"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/maring_padding_5"
+                android:layout_marginLeft="@dimen/maring_padding_1"
+                android:layout_marginRight="@dimen/maring_padding_1"
+                android:background="@color/white"
+                android:layout_below="@id/img_character">
+                <TextView
+                    android:id="@+id/tv_character_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_character_bg"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_item_gen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/maring_padding_5"
+                android:layout_below="@id/rl_price">
+                <ImageView
+                    android:id="@+id/img_item_gen"
+                    android:layout_width="@dimen/maring_padding_15"
+                    android:layout_height="@dimen/maring_padding_15"
+                    android:src="@drawable/sandwatch"
+                    android:layout_marginLeft="@dimen/maring_padding_15"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/white"/>
+                <TextView
+                    android:id="@+id/tv_character_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Age : 0"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_item_swift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_5"
+                android:layout_below="@id/rl_item_gen">
+                <ImageView
+                    android:id="@+id/img_item_swift"
+                    android:layout_width="@dimen/maring_padding_15"
+                    android:layout_height="@dimen/maring_padding_15"
+                    android:src="@drawable/alarm"
+                    android:layout_marginLeft="@dimen/maring_padding_15"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/white"/>
+                <TextView
+                    android:id="@+id/tv_character_dropping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Dropping : 1 h"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gif_heart"
+            android:layout_width="@dimen/maring_padding_200"
+            android:layout_height="@dimen/maring_padding_200"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/heart"
+            android:alpha="0.8"
+            android:visibility="gone"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_curtain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/maring_padding_250"
+            android:background="@drawable/curtain"
+            android:alpha="0.7"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_private_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/maring_padding_20"
+        android:layout_marginTop="@dimen/maring_padding_30"
+        android:layout_marginRight="@dimen/maring_padding_20"
+        android:background="@drawable/round_blue"
+        android:fontFamily="@font/voces"
+        android:text="@string/PRIVATE_TIME"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_left_time_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/maring_padding_15"
+        android:layout_marginLeft="@dimen/maring_padding_20"
+        android:layout_marginRight="@dimen/maring_padding_20"
+        android:text="@string/LETF_TIME"
+        android:layout_below="@id/btn_private_time"
+        android:textAlignment="center"
+        android:textColor="@color/dark_character_bg"
+        android:textSize="@dimen/maring_padding_15"/>
+
+    <LinearLayout
+        android:id="@+id/ly_left_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_left_time_title"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/maring_padding_25"
+            android:layout_height="@dimen/maring_padding_25"
+            android:src="@drawable/alarm"
+            android:tint="@color/dark_character_bg"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_left_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/maring_padding_15"
+            android:text="1h 01 min left"
+            android:textColor="@color/dark_character_bg"
+            android:textSize="@dimen/maring_padding_20"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_egg"
+        android:layout_width="@dimen/maring_padding_100"
+        android:layout_height="@dimen/maring_padding_100"
+        android:layout_below="@id/ly_left_time"
+        android:layout_marginTop="@dimen/maring_padding_10"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/egg"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

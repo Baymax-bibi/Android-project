@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_home_bg"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/maring_padding_5"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_character"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/maring_padding_250"
+            android:src="@drawable/naruto"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tv_character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_character"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/maring_padding_5"
+            android:fontFamily="serif"
+            android:text="naruto"
+            android:textColor="@color/dark_character_bg"
+            android:textSize="@dimen/maring_padding_30" />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/maring_padding_30"
+            android:layout_marginRight="@dimen/maring_padding_30"
+            android:layout_marginTop="@dimen/maring_padding_5"
+            android:layout_below="@id/tv_character_name"
+            android:text="@string/character_content"
+            android:textColor="@color/black_bg"
+            android:textSize="@dimen/maring_padding_15"/>
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_content"
+            android:layout_marginTop="@dimen/maring_padding_10"
+            android:layout_marginLeft="@dimen/maring_padding_30"
+            android:layout_marginRight="@dimen/maring_padding_30"
+            android:background="@drawable/round_blue"
+            android:text="@string/start"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

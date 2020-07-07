@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/world"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/maring_padding_240"
+        android:background="@drawable/map2"
+        android:layout_alignParentBottom="true"/>
+
+    <View
+        android:id="@+id/over"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"/>
+
+
+    <ImageView
+        android:id="@+id/white_ether"
+        android:layout_width="@dimen/maring_padding_120"
+        android:layout_height="@dimen/maring_padding_120"
+        android:layout_marginTop="@dimen/maring_padding_40"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/white_ether"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/white_ether"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/rye"
+        android:text="ethereum"
+        android:textColor="@color/white"
+        android:textSize="@dimen/maring_padding_20" />
+
+
+    <LinearLayout
+        android:id="@+id/ly_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/maring_padding_20"
+        android:layout_marginRight="@dimen/maring_padding_20"
+        android:layout_marginTop="@dimen/maring_padding_10"
+        android:paddingTop="@dimen/maring_padding_5"
+        android:paddingBottom="@dimen/maring_padding_5"
+        android:background="@drawable/round_transparent">
+        <ImageView
+            android:layout_width="@dimen/maring_padding_30"
+            android:layout_height="@dimen/maring_padding_30"
+            android:layout_marginLeft="@dimen/maring_padding_5"
+            android:src="@drawable/icon_email"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/white"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/maring_padding_10"
+            android:layout_marginLeft="@dimen/maring_padding_20"
+            android:hint="@string/email"
+            android:textColorHint="@color/transparent_white_text"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent_white_text_bg"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/maring_padding_20"
+        android:layout_marginTop="@dimen/maring_padding_30"
+        android:layout_marginRight="@dimen/maring_padding_20"
+        android:background="@drawable/round_blue"
+        android:fontFamily="@font/voces"
+        android:text="@string/send"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_to_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/maring_padding_20"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_to_register"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="@dimen/maring_padding_20"/>-->
+</RelativeLayout>

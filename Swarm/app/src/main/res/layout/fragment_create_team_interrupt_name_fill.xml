@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient_primary">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/header_title"
+            layout="@layout/layout_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_50"
+            android:layout_marginLeft="@dimen/button_margin_30" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header_title"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/default_spacing_10"
+            android:layout_marginRight="@dimen/default_spacing_10"
+            android:layout_marginBottom="@dimen/margin_70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/empty_rounded_border"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_spacing_20">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/usernameText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/body_white_1"
+                            android:text="@string/CREATETEAMDES"/>
+
+                        <EditText
+                            android:id="@+id/et_irs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_spacing_20"
+                            style="@style/body_white_1"
+                            android:layout_below="@id/usernameText"
+                            android:padding="@dimen/default_spacing_10"
+                            android:hint="@string/username"
+                            android:focusable="@null"
+                            android:textColorHint="@color/text_color_white_38"
+                            android:background="@drawable/et_white"/>
+
+
+                        <EditText
+                            android:id="@+id/et_thory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_spacing_10"
+                            style="@style/body_white_1"
+                            android:layout_below="@id/et_irs"
+                            android:padding="@dimen/default_spacing_10"
+                            android:focusable="@null"
+                            android:hint="@string/team_name"
+                            android:textColorHint="@color/text_color_white_38"
+                            android:background="@drawable/et_white"/>
+
+
+                        <Button
+                            android:id="@+id/btn_continue"
+                            style="@style/button_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/et_thory"
+                            android:layout_marginLeft="@dimen/default_spacing_10"
+                            android:layout_marginRight="@dimen/default_spacing_10"
+                            android:layout_marginTop="@dimen/button_margin_20"
+                            android:text="@string/CREATETEAM" />
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shape_drawable"/>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/bottomapppbartint"
+        app:fabCradleDiameter="70dp"
+        app:hideOnScroll="false">
+
+        <LinearLayout
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_menu_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:contentDescription="TODO" />
+
+            <ImageView
+                android:id="@+id/settingButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_dial"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/teamButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_people_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <ImageView
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_search_24"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/text_color_white_100"
+        app:srcCompat="@drawable/icon_chevron_up"
+        app:layout_anchor="@id/bar"/>
+<!--    <FrameLayout-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

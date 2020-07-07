@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:endColor="@color/dark_character_bg"
+        android:startColor="@color/dark_character_bg"
+        android:type="linear" />
+    <corners android:radius="@dimen/maring_padding_5"/>
+</shape>

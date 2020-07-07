@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop Shadow Stack -->
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#00000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#01000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#02000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#03000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#04000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#05000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#06000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#06000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#06000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:top="1.5dp" />
+            <solid android:color="#06000000" />
+            <corners android:radius="@dimen/button_radius" />
+        </shape>
+    </item>
+
+    <!-- White Top color -->
+    <item android:top="@dimen/button_margin_5">
+        <shape >
+            <gradient
+                android:angle="90"
+                android:endColor="@color/primary_color_50"
+                android:startColor="@color/primary_color_500" />
+            <corners
+                android:topLeftRadius="@dimen/button_radius"
+                android:topRightRadius="@dimen/button_radius"/>
+        </shape>
+    </item>
+</layer-list>

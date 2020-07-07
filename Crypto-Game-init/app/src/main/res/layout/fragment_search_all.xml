@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_search_all_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/maring_padding_10"
+        android:layout_marginRight="@dimen/maring_padding_10"
+        android:paddingTop="@dimen/maring_padding_5"
+        android:paddingBottom="@dimen/maring_padding_5">
+
+        <ImageView
+            android:id="@+id/img_total"
+            android:layout_width="@dimen/maring_padding_20"
+            android:layout_height="@dimen/maring_padding_20"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_total" />
+
+        <TextView
+            android:id="@+id/tv_search_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_total"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="@dimen/maring_padding_10"
+            android:text="@string/total"
+            android:textColor="@color/white" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleY="0.6"
+            android:layout_marginLeft="@dimen/maring_padding_15"
+            android:layout_marginRight="@dimen/maring_padding_5"
+            android:layout_marginBottom="@dimen/maring_padding_5"
+            android:layout_toRightOf="@id/tv_search_total">
+
+            <SearchView
+                android:id="@+id/sv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:textColor="@color/dark_character_bg"
+                android:layout_marginRight="@dimen/maring_padding_10"
+                android:background="@drawable/round_search"
+                android:paddingTop="@dimen/maring_padding_1"
+                android:paddingBottom="@dimen/maring_padding_1" />
+
+        </RelativeLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/ly_search_gen"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginRight="@dimen/maring_padding_10"-->
+        <!--            android:layout_toLeftOf="@id/ly_search_price">-->
+        <!--            <TextView-->
+        <!--                android:id="@+id/tv_search_gen"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:fontFamily="sans-serif"-->
+        <!--                android:text="@string/age"-->
+        <!--                android:textColor="@color/white"/>-->
+        <!--            <ImageView-->
+        <!--                android:id="@+id/img_search_gen"-->
+        <!--                android:layout_width="@dimen/maring_padding_20"-->
+        <!--                android:layout_height="@dimen/maring_padding_20"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:src="@drawable/icon_drop_down"-->
+        <!--                android:tint="@color/white"/>-->
+        <!--        </LinearLayout>-->
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/ly_search_price"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/tv_search_price"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:fontFamily="sans-serif"-->
+        <!--                android:text="@string/price"-->
+        <!--                android:textColor="@color/white" />-->
+        <!--            <ImageView-->
+        <!--                android:id="@+id/img_search_price"-->
+        <!--                android:layout_width="@dimen/maring_padding_20"-->
+        <!--                android:layout_height="@dimen/maring_padding_20"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:src="@drawable/icon_drop_down"-->
+        <!--                android:tint="@color/white"/>-->
+        <!--        </LinearLayout>-->
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="@dimen/maring_padding_5"
+        android:layout_below="@id/rl_sort"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/maring_padding_10"
+        android:numColumns="auto_fit" />
+
+</RelativeLayout>

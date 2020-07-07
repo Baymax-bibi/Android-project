@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient_primary">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_big_green_down"
+    android:paddingBottom="@dimen/margin_70">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/button_margin_20"
+        android:layout_marginRight="@dimen/button_margin_20"
+        android:background="@drawable/round_white_bg"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_40"
+            android:layout_marginLeft="@dimen/button_margin_40"
+            android:text="703-555-1212"
+            android:fontFamily="@font/futura_bold"
+            android:textSize="20sp"
+            style="@style/title_black_h5"/>
+        <TextView
+            android:id="@+id/tv_detail_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SWARMROUND"
+            android:layout_below="@id/tv_number"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/button_margin_40"
+            android:textSize="16sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textColor="@color/secondary_color_400"
+
+            />
+        <TextView
+            android:id="@+id/tv_detail_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/button_margin_40"
+            android:text="@string/CONSENSUS"
+            android:textSize="16sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textColor="@color/secondary_color_400"
+            android:layout_below="@id/tv_detail_one"
+            style="@style/title_black_h7"/>
+        <TextView
+            android:id="@+id/tv_detail_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/button_margin_40"
+            android:text="@string/IRSSCAM"
+            android:textSize="16sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textColor="@color/secondary_color_400"
+            style="@style/title_black_h7"
+            android:layout_below="@id/tv_detail_two"/>
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_60"
+            android:layout_marginRight="@dimen/margin_50"
+            android:layout_marginBottom="@dimen/button_margin_20"
+            android:layout_alignParentEnd="true"
+            android:text="@string/EXIT"
+            android:layout_below="@id/tv_detail_three"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:textColor="@color/primary_color_500"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shape_drawable"/>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/bottomapppbartint"
+        app:fabCradleDiameter="70dp"
+        app:hideOnScroll="false">
+
+        <LinearLayout
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_menu_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:contentDescription="TODO" />
+
+            <ImageView
+                android:id="@+id/settingButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_dial"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/teamButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_people_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <ImageView
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_search_24"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/text_color_white_100"
+        app:srcCompat="@drawable/icon_chevron_down"
+        app:layout_anchor="@id/bar"/>
+<!--    <FrameLayout-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--    </FrameLayout>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

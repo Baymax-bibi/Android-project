@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/button_margin_30"
+    android:paddingBottom="@dimen/button_margin_30"
+    android:paddingLeft="@dimen/button_margin_20"
+    android:paddingRight="@dimen/button_margin_20"
+    android:background="@drawable/background_gradient_primary_t">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/button_margin_20"
+        android:layout_toLeftOf="@id/item_ass_remove"
+        android:layout_marginRight="@dimen/spacing_15"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/item_ass_name"
+            style="@style/title_white_h7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="@string/username" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_ass_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/button_margin_20"
+        android:text="Remove"
+        android:textColor="@color/text_color_white_100"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

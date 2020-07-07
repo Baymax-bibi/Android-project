@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/button_margin_30"
+    android:paddingBottom="@dimen/button_margin_30"
+    android:paddingLeft="@dimen/button_margin_20"
+    android:paddingRight="@dimen/button_margin_20"
+    android:background="@drawable/background_gradient_primary_t">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/margin_60"
+        android:layout_height="@dimen/margin_60"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        app:civ_border="false"
+        android:src="@drawable/baseline_person_white_48dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/avatar"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/button_margin_20"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/title_white_h7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="@string/username" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/fName"
+                android:textColor="#60ffffff"
+                style="@style/body_white_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Fname" />
+            <TextView
+                android:id="@+id/lName"
+                android:textColor="#60ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_spacing_10"
+                android:textSize="12sp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Lname" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sent_invite"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        style="@style/title_white_h6_thick"
+        android:text="@string/invite"
+        android:layout_alignBaseline="@id/avatar"
+        android:textSize="16sp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

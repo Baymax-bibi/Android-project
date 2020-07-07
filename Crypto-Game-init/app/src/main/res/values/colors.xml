@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE1751bf</color>
+    <color name="colorPrimaryDark">#EE1751bf</color>
+    <color name="colorAccent">#EE1751bf</color>
+
+    <color name="white">#ffffff</color>
+    <color name="transparent_white">#44ffffff</color>
+    <color name="transparent_white_text">#88ffffff</color>
+    <color name="transparent_white_text_bg">#00ffffff</color>
+    <color name="gray_light">#FDFDFD</color>
+    <color name="yarn">#DD35D51B</color>
+    <color name="orange">#f3cd05</color>
+    <color name="transparent">#99444444</color>
+    <color name="black_bg">#2e2e2e</color>
+    <color name="transparent_black">#C1C1C1</color>
+    <color name="green_btn">#dd3cb029</color>
+    <color name="dark_green_btn">#DD3A982B</color>
+    <color name="black_overlay">#662b5468</color>
+    <color name="alert_transparent">#66000000</color>
+    <color name="dark_bg">#808080</color>
+    <color name="dark_character_bg">#EE1751bf</color>
+    <color name="full_transparent">#00000000</color>
+
+    <color name="circle_color">#89aeb6</color>
+    <color name="warn">#F82828</color>
+</resources>

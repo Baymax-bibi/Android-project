@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/spacing_15"
+        android:paddingRight="@dimen/spacing_15"
+        android:background="@drawable/log_rounded_border"
+        android:layout_marginTop="@dimen/default_spacing_10"
+        android:layout_marginBottom="@dimen/default_spacing_10">
+
+        <TextView
+            android:id="@+id/positionText"
+            style="@style/title_white_h6_thick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/spacing_15"
+            android:layout_marginBottom="@dimen/spacing_15"
+            android:fontFamily="@font/futura_bold"
+            android:textSize="16sp"
+            android:text="4" />
+
+        <View
+            android:id="@+id/positionDivider4"
+            android:layout_width="0.5dp"
+            android:layout_height="72dp"
+            android:layout_toRightOf="@id/positionText"
+            android:layout_marginRight="@dimen/default_spacing_10"
+            android:layout_marginLeft="@dimen/default_spacing_10"
+            android:background="@color/text_color_white_100"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/positionDivider4"
+            android:layout_toStartOf="@id/votesDivider4"
+            android:layout_marginEnd="@dimen/button_margin_20"
+            android:layout_marginBottom="@dimen/spacing_15"
+            android:text="@string/IRSSCAM"
+            style="@style/title_white_h6"
+            android:fontFamily="@font/futura_bold"
+            android:layout_centerVertical="true"/>
+
+        <View
+            android:id="@+id/votesDivider4"
+            android:layout_width="0.5dp"
+            android:layout_height="72dp"
+            android:layout_toLeftOf="@id/ly_right4"
+            android:layout_marginRight="@dimen/default_spacing_10"
+            android:layout_marginLeft="@dimen/default_spacing_10"
+            android:background="@color/text_color_white_100"
+            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:id="@+id/ly_right4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_swarm_re4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/swarm_title"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="16sp"
+                style="@style/body_white_1"
+                android:layout_marginTop="@dimen/button_margin_5"/>
+
+            <TextView
+                android:id="@+id/votesText4"
+                style="@style/body_white_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="14/19"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

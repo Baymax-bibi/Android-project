@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient_primary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_big_green_down"
+        android:paddingBottom="@dimen/button_margin_100">
+
+        <TextView
+            style="@style/title_white_h5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_50"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:layout_marginBottom="@dimen/default_spacing_20"
+            android:textSize="20sp"
+            android:fontFamily="@font/futura_bold"
+            android:shadowColor="@color/secondary_color_400"
+            android:shadowRadius="5"
+            android:shadowDy="5"
+            android:shadowDx="0"
+            android:text="@string/swarm_title"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_spacing_20"
+            android:padding="@dimen/default_spacing_20"
+            android:layout_marginLeft="@dimen/image_icon_padding_15"
+            android:layout_marginRight="@dimen/image_icon_padding_15"
+            android:background="@drawable/empty_rounded_border">
+
+            <TextView
+                android:id="@+id/phoneNumberText"
+                style="@style/body_white_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_spacing_10"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="16sp"
+                android:text="@string/phone_number"/>
+
+            <TextView
+                android:id="@+id/clipText"
+                style="@style/body_white_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneNumberText"
+                android:layout_marginBottom="@dimen/default_spacing_20"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="16sp"
+                android:text="@string/on_boarding_introduction_text"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@+id/clipText">
+
+                <ProgressBar
+                    android:id="@+id/clipLoadingView"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/white_circle"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/playButton"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/white_circle"
+                    android:src="@drawable/ic_play_arrow"
+                    android:tint="@color/colorAccent"
+                    android:visibility="visible"
+                    android:onClick="playBtnClick"/>
+
+                <SeekBar
+                    android:id="@+id/positionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/default_spacing_10"
+                    android:layout_toRightOf="@id/playButton"
+                    android:progressDrawable="@drawable/seek_bar"
+                    android:thumb="@drawable/seek_thumb"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/progressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    style="@style/body_white_1"
+                    tools:text="00:12"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_spacing_20">
+            <Button
+                android:id="@+id/playswarmButton"
+                style="@style/button_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/view"
+                android:text="@string/playSwarm"
+                android:fontFamily="@font/proxima_nova_extrabold"
+                android:textSize="16sp"
+                android:paddingLeft="@dimen/default_spacing_20"
+                android:paddingRight="@dimen/button_margin_20"/>
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/default_spacing_10"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/nextswarmButton"
+                style="@style/button_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/view"
+                android:fontFamily="@font/proxima_nova_extrabold"
+                android:textSize="16sp"
+                android:paddingLeft="@dimen/default_spacing_20"
+                android:paddingRight="@dimen/button_margin_20"
+                android:text="@string/nextSwarm" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/usersInSwarmsText"
+            style="@style/body_white_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="12sp"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:text="@string/users_in_swarm"/>
+
+        <TextView
+            android:id="@+id/awaitingResponseText"
+            style="@style/body_white_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="12sp"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:text="@string/awaiting_response"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shape_drawable"/>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/bottomapppbartint"
+        app:fabCradleDiameter="70dp"
+        app:hideOnScroll="false">
+
+        <LinearLayout
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_menu_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:contentDescription="TODO" />
+
+            <ImageView
+                android:id="@+id/settingButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_dial"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/teamButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_people_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <ImageView
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_search_24"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/text_color_white_100"
+        app:srcCompat="@drawable/icon_chevron_down"
+        app:layout_anchor="@id/bar"/>
+<!--    <FrameLayout-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

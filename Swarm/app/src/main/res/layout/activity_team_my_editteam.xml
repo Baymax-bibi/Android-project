@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_gradient_primary">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ly_myRewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/ly_teamRewards"
+            android:layout_marginTop="@dimen/spacing_15"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/spacing_15"
+                android:layout_height="@dimen/spacing_15"
+                android:src="@drawable/ic_chk"
+                android:tint="@color/primary_color_500"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/myRewards"
+                android:layout_gravity="bottom"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_teamRewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ly_myRewards"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/spacing_15"
+                android:layout_height="@dimen/spacing_15"
+                android:src="@drawable/ic_chk"
+                android:tint="@color/blue_purple_100"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/teamRewards"
+                android:layout_gravity="bottom"
+                android:textSize="10sp"/>
+        </LinearLayout>
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_50"
+            android:layout_marginLeft="@dimen/button_margin_30" />
+
+        <ImageView
+            android:id="@+id/img_chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:layout_below="@id/header"
+            android:src="@drawable/main_screen_graph"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/img_chart"
+            android:layout_marginLeft="@dimen/default_spacing_10"
+            android:layout_marginRight="@dimen/default_spacing_10"
+            android:layout_marginBottom="@dimen/margin_70"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/empty_rounded_border"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_spacing_20">
+
+                    <TextView
+                        android:id="@+id/tv_title_rankings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ERICTEAM"
+                        style="@style/title_white_h5"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:id="@+id/tv_doneTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/DONE"
+                        android:textColor="@color/text_color_white_38"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="12sp"
+                        android:layout_alignBaseline="@id/tv_title_rankings"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_team"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_title_rankings"
+                        android:layout_marginTop="@dimen/default_spacing_10">
+
+                        <View
+                            android:id="@+id/view_center"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_table_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_15"
+                        android:layout_below="@+id/rl_team">
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_80"
+                            android:text="@string/username"
+                            style="@style/title_white_h6"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_mainname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eric"
+                        android:textColor="@color/text_color_white_100"
+                        android:layout_marginLeft="@dimen/margin_80"
+                        android:layout_below="@id/rl_table_title"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/button_margin_20"
+                        style="@style/title_white_h6_thick"/>
+                    <ListView
+                        android:id="@+id/lv_user_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/button_margin_20"
+                        android:layout_below="@id/tv_mainname"
+                        android:dividerHeight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:divider="@null"
+                        />
+                </RelativeLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shape_drawable"/>
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/bottomapppbartint"
+        app:fabCradleDiameter="70dp"
+        app:hideOnScroll="false">
+
+        <LinearLayout
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_menu_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:contentDescription="TODO" />
+
+            <ImageView
+                android:id="@+id/settingButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_dial"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/teamButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_people_48"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+            <ImageView
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icons8_search_24"
+                android:padding="@dimen/image_icon_padding_10"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/text_color_white_100"
+        app:srcCompat="@drawable/icon_chevron_up"
+        app:layout_anchor="@id/bar"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

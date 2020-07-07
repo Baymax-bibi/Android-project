@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/loading">
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/world"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/maring_padding_240"-->
+<!--        android:background="@drawable/map2"-->
+<!--        android:layout_alignParentBottom="true"/>-->
+
+<!--    <View-->
+<!--        android:id="@+id/over"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/transparent"/>-->
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/maring_padding_50"
+        android:layout_height="@dimen/maring_padding_50"
+        android:layout_marginTop="@dimen/maring_padding_15"
+        android:layout_marginLeft="@dimen/maring_padding_5"
+        android:src="@drawable/ethereum_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/logo"
+        android:layout_alignBottom="@id/logo"
+        android:fontFamily="@font/rye"
+        android:text="ethereum"
+        android:textColor="@color/white"
+        android:textSize="@dimen/maring_padding_10" />
+
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/loading"
+        android:textColor="@color/white"
+        android:textSize="@dimen/padding_margin_14"
+        android:layout_above="@id/img_dotted_circle"
+        android:layout_marginBottom="@dimen/padding_margin_25"/>
+
+
+    <me.tankery.lib.circularseekbar.CircularSeekBar
+        android:id="@+id/circle_bar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        app:cs_negative_enabled="true"
+        app:cs_circle_style="round"
+        app:cs_circle_color = "@color/dark_character_bg"
+        app:cs_circle_progress_color = "#ff6e02"
+        app:cs_pointer_color = "#f1bf1d"
+        app:cs_circle_stroke_width="1dp"
+        app:cs_pointer_stroke_width="@dimen/padding_margin_8"
+        app:cs_pointer_halo_width="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/padding_margin_18"
+        android:text = "000 %"/>
+
+    <ImageView
+        android:id="@+id/img_dotted_circle"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/dotted"
+        android:layout_centerInParent="true"
+        android:layerType="software" />
+
+    <ImageView
+        android:layout_width="215dp"
+        android:layout_height="215dp"
+        android:src="@drawable/circle"
+        android:layout_centerInParent="true"
+        android:layerType="software" />
+
+</RelativeLayout>

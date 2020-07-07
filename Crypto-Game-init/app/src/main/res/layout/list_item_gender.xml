@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="@dimen/maring_padding_120"
+        android:layout_height="@dimen/maring_padding_160"
+        android:layout_centerInParent="true">
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/maring_padding_120"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_item_character_blue"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_gender"-->
+<!--            android:layout_width="@dimen/maring_padding_20"-->
+<!--            android:layout_height="@dimen/maring_padding_20"-->
+<!--            android:layout_above="@id/view_bg"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/icon_man"-->
+<!--            android:tint="@color/dark_character_bg" />-->
+        <ImageView
+            android:id="@+id/img_character"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/maring_padding_100"
+            android:layout_marginLeft="@dimen/maring_padding_10"
+            android:layout_marginRight="@dimen/maring_padding_10"
+            android:scaleType="fitXY"
+            android:src="@drawable/character"/>
+
+
+        <TextView
+            android:id="@+id/tv_character_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_character"
+            android:text="@string/name"
+            android:layout_marginTop="@dimen/maring_padding_10"
+            android:layout_marginLeft="@dimen/maring_padding_20"
+            android:layout_marginRight="@dimen/maring_padding_20"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/maring_padding_3"
+            android:layout_marginRight="@dimen/maring_padding_3"
+            android:layout_marginBottom="@dimen/maring_padding_10"
+            android:background="@color/white">
+            <ImageView
+                android:id="@+id/img_item_price"
+                android:layout_width="@dimen/maring_padding_15"
+                android:layout_height="@dimen/maring_padding_15"
+                android:src="@drawable/icon_price"
+                android:layout_marginLeft="@dimen/maring_padding_15"
+                android:layout_centerVertical="true"
+                android:tint="@color/dark_character_bg"/>
+            <TextView
+                android:id="@+id/tv_character_price_wod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/maring_padding_12"
+                android:layout_centerInParent="true"
+                android:textColor="@color/dark_character_bg"
+                android:text="500 Wod"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_character_price_eth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/maring_padding_12"
+                android:text="$ 10"
+                android:textColor="@color/dark_character_bg"/>
+        </RelativeLayout>
+
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/rl_item_gen"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/maring_padding_5"-->
+<!--            android:layout_below="@id/tv_character_name">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/img_item_gen"-->
+<!--                android:layout_width="@dimen/maring_padding_15"-->
+<!--                android:layout_height="@dimen/maring_padding_15"-->
+<!--                android:src="@drawable/sandwatch"-->
+<!--                android:layout_marginLeft="@dimen/maring_padding_15"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:tint="@color/white"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_character_age"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="Age : 0"-->
+<!--                android:textColor="@color/white"/>-->
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/rl_item_swift"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/maring_padding_5"-->
+<!--            android:layout_marginBottom="@dimen/maring_padding_5"-->
+<!--            android:layout_below="@id/rl_item_gen">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/img_item_swift"-->
+<!--                android:layout_width="@dimen/maring_padding_15"-->
+<!--                android:layout_height="@dimen/maring_padding_15"-->
+<!--                android:src="@drawable/alarm"-->
+<!--                android:layout_marginLeft="@dimen/maring_padding_15"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:tint="@color/white"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_character_dropping"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="Dropping : 1 h"-->
+<!--                android:textColor="@color/white"/>-->
+<!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

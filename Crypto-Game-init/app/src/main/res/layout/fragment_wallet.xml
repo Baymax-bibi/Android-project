@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_wallet_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/maring_padding_80"
+        android:layout_marginTop="@dimen/maring_padding_15"
+        android:layout_marginLeft="@dimen/maring_padding_5"
+        android:layout_marginRight="@dimen/maring_padding_5"
+        android:layout_below="@+id/tv_wallet"
+        android:paddingTop="@dimen/maring_padding_10"
+        android:paddingLeft="@dimen/maring_padding_10"
+        android:paddingRight="@dimen/maring_padding_10"
+        android:paddingBottom="@dimen/maring_padding_10"
+        android:elevation="@dimen/maring_padding_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/img_coin_icon"
+                    android:layout_width="@dimen/maring_padding_30"
+                    android:layout_height="@dimen/maring_padding_30"
+                    android:src="@drawable/thunder"
+                    android:layout_centerHorizontal="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_coin_icon"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        android:id="@+id/tv_thu_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_eth"
+                        android:text="0"
+                        android:layout_marginRight="@dimen/maring_padding_10"
+                        android:textSize="@dimen/maring_padding_20"
+                        android:textColor="@color/dark_character_bg"/>
+
+                    <TextView
+                        android:id="@+id/tv_eth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Boltz"
+                        android:textSize="@dimen/maring_padding_12"
+                        android:layout_alignBaseline="@id/tv_thu_price"
+                        android:textColor="@color/dark_character_bg"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/img_inapp_coin_icon"
+                    android:layout_width="@dimen/maring_padding_30"
+                    android:layout_height="@dimen/maring_padding_30"
+                    android:src="@drawable/coin"
+                    android:layout_centerHorizontal="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_inapp_coin_icon"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        android:id="@+id/tv_wod_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_usd"
+                        android:text="0"
+                        android:layout_marginRight="@dimen/maring_padding_10"
+                        android:textSize="@dimen/maring_padding_20"
+                        android:textColor="@color/dark_character_bg"/>
+                    <TextView
+                        android:id="@+id/tv_usd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="WOD"
+                        android:textSize="@dimen/maring_padding_12"
+                        android:textColor="@color/dark_character_bg"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:id="@+id/ly_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_clear"
+                        />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="@dimen/maring_padding_5"-->
+<!--                        android:text="@string/clear"/>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_cart"
+                        />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="@dimen/maring_padding_5"-->
+<!--                        android:text="@string/clear"/>-->
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/sl_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/rl_wallet"
+        android:layout_marginTop="@dimen/maring_padding_10">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/rl_wod_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free_coin"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/img_avater_1"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/coin"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_1"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a50"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/coin"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_character_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/free"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_wod_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/small_pack"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/maring_padding_1"-->
+                <!--                    android:background="@color/green_btn"-->
+                <!--                    android:layout_below="@id/rl_card_2"/>-->
+                <ImageView
+                    android:id="@+id/img_avater_2"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/coin"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_2"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a500"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/coin"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_character_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/ether2"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_wod_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal_pack"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/maring_padding_1"-->
+                <!--                    android:background="@color/green_btn"-->
+                <!--                    android:layout_below="@id/rl_card_3"/>-->
+                <ImageView
+                    android:id="@+id/img_avater_3"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/coin"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_3"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a1000"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/coin"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_character_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/ether3"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_wod_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/big_pack"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/maring_padding_1"-->
+                <!--                    android:background="@color/green_btn"-->
+                <!--                    android:layout_below="@id/rl_card_4"/>-->
+                <ImageView
+                    android:id="@+id/img_avater_4"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/coin"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_4"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a3000"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/coin"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_character_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/ether4"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/maring_padding_160"
+                android:layout_marginRight="@dimen/maring_padding_20"
+                />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/sl_coin"
+        android:layout_marginTop="@dimen/maring_padding_5">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_thu_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_1_thunder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_1_thunder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/free_coin"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/img_avater_1_thunder"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/thunder"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_1_thunder"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_1_thunder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a50"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/maring_padding_3"
+                        android:src="@drawable/thunder"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_character_1_thunder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/free"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_thu_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_2_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_2_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/small_pack"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/maring_padding_1"-->
+                <!--                    android:background="@color/green_btn"-->
+                <!--                    android:layout_below="@id/rl_card_2"/>-->
+                <ImageView
+                    android:id="@+id/img_avater_2_thu"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/thunder"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_2_thu"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_2_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a500"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/maring_padding_3"
+                        android:src="@drawable/thunder"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_character_2_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/ether2"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_thu_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_3_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_3_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal_pack"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/maring_padding_1"-->
+                <!--                    android:background="@color/green_btn"-->
+                <!--                    android:layout_below="@id/rl_card_3"/>-->
+                <ImageView
+                    android:id="@+id/img_avater_3_thu"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/thunder"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_3_thu"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_3_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a1000"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/maring_padding_3"
+                        android:src="@drawable/thunder"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_character_3_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/ether3"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_thu_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/maring_padding_5"
+                android:layout_marginBottom="@dimen/maring_padding_10"
+                android:layout_marginTop="@dimen/maring_padding_10"
+                android:layout_marginLeft="@dimen/maring_padding_10"
+                android:background="@drawable/round_gray">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_4_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/maring_padding_3"
+                    android:paddingBottom="@dimen/maring_padding_3">
+                    <TextView
+                        android:id="@+id/tv_title_4_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/big_pack"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:textColor="@color/dark_character_bg"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/maring_padding_1"-->
+                <!--                    android:background="@color/green_btn"-->
+                <!--                    android:layout_below="@id/rl_card_4"/>-->
+                <ImageView
+                    android:id="@+id/img_avater_4_thu"
+                    android:layout_width="@dimen/maring_padding_50"
+                    android:layout_height="@dimen/maring_padding_50"
+                    android:layout_marginTop="@dimen/maring_padding_25"
+                    android:layout_marginLeft="@dimen/maring_padding_20"
+                    android:layout_marginRight="@dimen/maring_padding_20"
+                    android:src="@drawable/thunder"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/btn_character_4_thu"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_price_4_thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/a3000"/>
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/maring_padding_3"
+                        android:src="@drawable/thunder"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_character_4_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/maring_padding_5"
+                    android:layout_marginLeft="@dimen/maring_padding_5"
+                    android:layout_marginRight="@dimen/maring_padding_5"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/maring_padding_5"
+                    android:background="@drawable/round_blue"
+                    android:fontFamily="@font/voces"
+                    android:text="@string/ether4"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/maring_padding_160"
+                android:layout_marginRight="@dimen/maring_padding_20"
+                />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

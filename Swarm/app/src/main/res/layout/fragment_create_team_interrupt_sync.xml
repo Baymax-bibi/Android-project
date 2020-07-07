@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_primary">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/button_margin_30"
+        android:layout_marginRight="@dimen/button_margin_30"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_white_bg">
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/button_margin_20"
+            android:text="@string/SYNCCONTACTS"
+            android:fontFamily="@font/futura_bold"
+            android:textColor="@color/secondary_color_500"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/tv_detail_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SYNCCONTACTS_DES"
+            android:layout_below="@id/tv_number"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/button_margin_20"
+            android:textColor="@color/secondary_color_400"
+            android:textSize="14dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_60"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:layout_marginBottom="@dimen/spacing_15"
+            android:layout_toLeftOf="@id/tv_allow"
+            android:text="@string/cancel"
+            android:layout_below="@id/tv_detail_one"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/primary_color_500"/>
+
+        <TextView
+            android:id="@+id/tv_allow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_60"
+            android:layout_marginRight="@dimen/margin_50"
+            android:layout_marginBottom="@dimen/spacing_15"
+            android:layout_alignParentEnd="true"
+            android:text="@string/ALLOW"
+            android:layout_below="@id/tv_detail_one"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/primary_color_500"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

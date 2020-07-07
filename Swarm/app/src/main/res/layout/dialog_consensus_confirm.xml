@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_white_100">
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_40"
+        android:layout_marginLeft="@dimen/button_margin_40"
+        android:text="703-555-1212"
+        android:fontFamily="@font/futura_bold"
+        android:textColor="@color/secondary_color_500"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/tv_detail_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SWARMROUND"
+        android:layout_below="@id/tv_number"
+        android:layout_marginTop="@dimen/button_margin_20"
+        android:layout_marginLeft="@dimen/button_margin_40"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/tv_detail_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_20"
+        android:layout_marginLeft="@dimen/button_margin_40"
+        android:text="@string/CONSENSUS"
+        android:layout_below="@id/tv_detail_one"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tv_detail_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_20"
+        android:layout_marginLeft="@dimen/button_margin_40"
+        android:text="@string/IRSSCAM"
+        android:textSize="20sp"
+        android:layout_below="@id/tv_detail_two"/>
+    <TextView
+        android:id="@+id/tv_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_60"
+        android:layout_marginRight="@dimen/margin_50"
+        android:layout_alignParentEnd="true"
+        android:text="@string/EXIT"
+        android:layout_below="@id/tv_detail_three"
+        android:textStyle="bold"
+        android:textSize="@dimen/button_margin_20"
+        android:textColor="@color/primary_color_500"/>
+
+
+</RelativeLayout>

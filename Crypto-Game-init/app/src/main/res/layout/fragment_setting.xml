@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setting_bg">
+
+    <Space
+        android:id="@+id/space_center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/space_center"
+        android:layout_marginBottom="@dimen/maring_padding_50"
+        android:background="@drawable/round_big_blue">
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/benchnine"
+            android:text="@string/setting"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/maring_padding_30" />
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_user_avatar"
+        android:layout_width="@dimen/maring_padding_100"
+        android:layout_height="@dimen/maring_padding_100"
+        app:cardCornerRadius="@dimen/maring_padding_15"
+        android:layout_above="@id/space_center"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="@dimen/maring_padding_5"
+        android:layout_margin="@dimen/maring_padding_5">
+        <RelativeLayout
+            android:id="@+id/rl_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_icon_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_setting"
+                android:tint="@color/dark_character_bg"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/space_center"
+        android:layout_marginTop="@dimen/maring_padding_10"
+        android:layout_marginLeft="@dimen/maring_padding_20"
+        android:layout_marginRight="@dimen/maring_padding_20">
+        <LinearLayout
+            android:id="@+id/ly_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/icon_mode"
+                android:tint="@color/dark_character_bg"/>
+            <TextView
+                android:id="@+id/tv_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/dark_character_bg"
+                android:text="@string/mode"/>
+            <ToggleButton
+                android:id="@+id/tg_mode"
+                android:layout_width="@dimen/maring_padding_100"
+                android:layout_height="@dimen/maring_padding_20"
+                android:layout_gravity="center_vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bgtoggle"
+                android:button="@null"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ly_noti"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/maring_padding_10"-->
+<!--            android:layout_below="@id/ly_mode">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/img_noti"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:src="@drawable/icon_notification"-->
+<!--                android:tint="@color/green_btn"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_noti"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="2"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:textColor="@color/green_btn"-->
+<!--                android:text="@string/notification"/>-->
+<!--            <Switch-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:layout_gravity="center_vertical"/>-->
+<!--        </LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/ly_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/maring_padding_10"
+            android:layout_below="@id/ly_mode">
+
+            <ImageView
+                android:id="@+id/img_sound"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/icon_sound"
+                android:tint="@color/dark_character_bg" />
+            <TextView
+                android:id="@+id/tv_sound"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/dark_character_bg"
+                android:text="@string/sound"/>
+            <ToggleButton
+                android:id="@+id/tg_sound"
+                android:layout_width="@dimen/maring_padding_100"
+                android:layout_height="@dimen/maring_padding_20"
+                android:layout_gravity="center_vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bgtoggle"
+                android:button="@null"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_profile_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ly_sound"
+            android:background="@drawable/round_blue"
+            android:layout_marginTop="@dimen/maring_padding_10"
+            android:layout_marginLeft="@dimen/maring_padding_20"
+            android:layout_marginRight="@dimen/maring_padding_20"
+            android:text="@string/save"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+</RelativeLayout>

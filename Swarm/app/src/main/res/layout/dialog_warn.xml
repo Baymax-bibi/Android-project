@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_primary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_white_bg"
+        android:layout_marginLeft="@dimen/button_margin_40"
+        android:layout_marginRight="@dimen/button_margin_40"
+        android:paddingBottom="@dimen/button_margin_30"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/button_margin_20"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:text="@string/WARNING_TITLE"
+            android:fontFamily="@font/futura_bold"
+            android:textColor="@color/secondary_color_500"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:layout_marginLeft="@dimen/button_margin_20"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:layout_marginBottom="@dimen/button_margin_30"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textColor="@color/secondary_color_400"
+            android:text="@string/warning_message"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_understand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i_understand"
+            android:layout_below="@id/tv_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/button_margin_30"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14dp"
+            android:textColor="@color/primary_color_500"/>
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_understand"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:layout_toLeftOf="@id/tv_understand"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/EXIT"
+            android:textColor="@color/primary_color_500"
+            android:textSize="14dp" />
+    </RelativeLayout>
+</RelativeLayout>

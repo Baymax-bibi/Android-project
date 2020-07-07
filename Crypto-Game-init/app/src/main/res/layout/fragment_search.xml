@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_bg">
+
+
+    <LinearLayout
+        android:id="@+id/ly_tab_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl_sale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/maring_padding_5"
+            android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:src="@drawable/icon_sale"/>
+                    <TextView
+                        android:id="@+id/tv_search_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/maring_padding_10"
+                        android:paddingRight="@dimen/maring_padding_10"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/sale"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_partner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/maring_padding_5"
+            android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:src="@drawable/icon_partner"/>
+                    <TextView
+                        android:id="@+id/tv_search_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/maring_padding_10"
+                        android:paddingRight="@dimen/maring_padding_10"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:fontFamily="sans-serif"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:text="@string/partner"/>
+                </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/maring_padding_5"
+            android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:layout_width="@dimen/maring_padding_20"
+                        android:layout_height="@dimen/maring_padding_20"
+                        android:src="@drawable/icon_all"/>
+                    <TextView
+                        android:id="@+id/tv_search_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/maring_padding_10"
+                        android:paddingRight="@dimen/maring_padding_10"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/maring_padding_10"
+                        android:fontFamily="sans-serif"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:text="@string/all"/>
+                </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/maring_padding_10"
+        android:layout_marginLeft="@dimen/maring_padding_5"
+        android:layout_marginRight="@dimen/maring_padding_5"
+        android:layout_marginBottom="@dimen/maring_padding_10"
+        android:layout_below="@id/ly_tab_search">
+
+    </FrameLayout>
+
+</RelativeLayout>

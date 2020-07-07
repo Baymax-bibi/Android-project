@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">RayyanCryption</string>
+
+    <string name="to_signup">don\'t have an account? register now!</string>
+    <string name="to_signin">already have an account? go to signin</string>
+    <string name="term">\tagree to terms and policy</string>
+    <string name="signin">sign in</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">name</string>
+    <string name="signup">sing up</string>
+    <string name="choose_character">Choose your character!</string>
+    <string name="start">Detail</string>
+    <string name="introduce_character_1">Here is your lovely crypto \n*narutos*</string>
+
+    <string name="title_activity_dash">DashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="character_content">Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto.</string>
+    <string name="catalogue">Catalogue</string>
+    <string name="search">Search</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="common">Common</string>
+    <string name="rares">Rares</string>
+    <string name="ultra">Ultra</string>
+    <string name="shifter">Shifter</string>
+    <string name="mystery">Mystery</string>
+    <string name="ethereum">Ethereum</string>
+    <string name="calculator">Calculator</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="save">S a v e</string>
+    <string name="old_pass">Old password</string>
+    <string name="new_pass">New password</string>
+    <string name="confirm_pass">Confirm password</string>
+    <string name="phone">Phone</string>
+    <string name="setting">Setting</string>
+    <string name="mode">Light / Dark</string>
+    <string name="notification">Notification</string>
+    <string name="sound">Sound</string>
+    <string name="owner">Owner</string>
+    <string name="more">\t+ more\t</string>
+    <string name="naruto">Naruto Uzumaki</string>
+    <string name="problem1">Faq 1 : Account</string>
+    <string name="what_lorem">What is Lorem Ipsum?</string>
+    <string name="sale">Sale</string>
+    <string name="partner">Partner</string>
+    <string name="all">All</string>
+    <string name="total">001</string>
+    <string name="price">Price</string>
+
+<!--    sharedPref-->
+    <string name="RAYYAN_PREF">rayyan_pref</string>
+    <string name="SETTING_MODE">setting_mode</string>
+    <string name="STRING_PREFF">string_preff</string>
+    <string name="age">Age</string>
+    <string name="buy">Buy Wod</string>
+    <string name="wallet">Wallet</string>
+    <string name="free">Free</string>
+    <string name="a50">50</string>
+    <string name="a500">500</string>
+    <string name="a5000">5000</string>
+    <string name="ether2">2 ETH</string>
+    <string name="ether3">3 ETH</string>
+    <string name="free_coin">FREE COINS</string>
+    <string name="small_pack">SMALL PACK</string>
+    <string name="normal_pack">NORMAL PACK</string>
+    <string name="a1000">1000</string>
+    <string name="ether4">6 ETH</string>
+    <string name="big_pack">BIG PACK</string>
+    <string name="a3000">3000</string>
+    <string name="AUCTION">auction</string>
+<!--    <string name="AUCTION_PREF">auction_pref</string>-->
+<!--    <string name="FUSE_STATE">fuse_state</string>-->
+    <string name="FUSE_GET">fuse_get</string>
+    <string name="FUSE_SEND">fuse_send</string>
+    <string name="SENT">Go to fuse</string>
+    <string name="FIND_PARTNER">Find Partner</string>
+    <string name="PRIVATE_TIME">Private time</string>
+    <string name="LETF_TIME">Will get child(s) some times later.</string>
+    <string name="WAKE_EGG">Wake egg</string>
+    <string name="FROM">From</string>
+    <string name="TO">To</string>
+    <string name="expire">Expire</string>
+    <string name="DAY">Day</string>
+
+
+    <string name="loading">LOADING...</string>
+    <string name="to_dash">to home</string>
+    <string name="send">Send</string>
+    <string name="back_to_signin">back? go to signin</string>
+    <string name="clear">Clear</string>
+    <string name="warn_insufficient">Insufficient funds</string>
+
+</resources>
