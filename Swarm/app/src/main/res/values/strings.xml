@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Gabriel Robocall Blocker</string>
 
+    <string name="titleId">B95FB</string>
     <string name="logo">Logo</string>
 
     <string name="on_boarding_introduction_title">Welcome to Gabriel Robocall Blocker!</string>

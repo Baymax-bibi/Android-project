@@ -6,114 +6,152 @@
     android:background="@drawable/background_gradient_primary">
 
 
-        <LinearLayout
-            android:orientation="vertical"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_big_green_down"
+        android:paddingBottom="@dimen/button_margin_100">
+
+        <TextView
+            style="@style/title_white_h5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_50"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:textSize="20sp"
+            android:fontFamily="@font/futura_bold"
+            android:layout_marginBottom="@dimen/default_spacing_20"
+            android:shadowColor="@color/secondary_color_400"
+            android:shadowRadius="5"
+            android:shadowDy="5"
+            android:shadowDx="0"
+            android:text="@string/use_swarm_title"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/round_big_green_down"
-            android:paddingBottom="@dimen/button_margin_100">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_spacing_20"
+            android:padding="@dimen/default_spacing_20"
+            android:layout_marginLeft="@dimen/image_icon_padding_15"
+            android:layout_marginRight="@dimen/image_icon_padding_15"
+            android:background="@drawable/empty_rounded_border">
 
             <TextView
-                style="@style/title_white_h5"
+                android:id="@+id/think"
+                style="@style/body_white_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/button_margin_50"
-                android:layout_marginLeft="@dimen/button_margin_30"
-                android:layout_marginRight="@dimen/button_margin_20"
-                android:textSize="20sp"
-                android:fontFamily="@font/futura_bold"
-                android:layout_marginBottom="@dimen/default_spacing_20"
-                android:shadowColor="@color/secondary_color_400"
-                android:shadowRadius="5"
-                android:shadowDy="5"
-                android:shadowDx="0"
-                android:text="@string/use_swarm_title"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_spacing_20"
-                android:padding="@dimen/default_spacing_20"
-                android:layout_marginLeft="@dimen/image_icon_padding_15"
-                android:layout_marginRight="@dimen/image_icon_padding_15"
-                android:background="@drawable/empty_rounded_border">
-
-                <TextView
-                    android:id="@+id/think"
-                    style="@style/body_white_1"
-                    android:layout_width="wrap_content"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/proxima_nova_regular"
-                    android:layout_height="wrap_content"
-                    android:text="What do you think the most popular theory will be?"/>
-                <EditText
-                    android:id="@+id/et_irs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_spacing_10"
-                    style="@style/body_white_1"
-                    android:layout_below="@id/think"
-                    android:padding="@dimen/default_spacing_10"
-                    android:focusable="@null"
-                    android:background="@drawable/et_white"/>
-
-                <TextView
-                    android:id="@+id/tv_consensus"
-                    style="@style/body_white_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/button_margin_20"
-                    android:fontFamily="@font/proxima_nova_regular"
-                    android:textSize="16sp"
-                    android:layout_below="@id/et_irs"
-                    android:text="@string/theory"/>
-                <EditText
-                    android:id="@+id/et_thory"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_spacing_10"
-                    style="@style/body_white_1"
-                    android:layout_below="@id/tv_consensus"
-                    android:padding="@dimen/default_spacing_10"
-                    android:focusable="@null"
-                    android:background="@drawable/et_white"/>
-
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/btn_continue"
-                style="@style/button_white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/button_margin_30"
-                android:fontFamily="@font/proxima_nova_regular"
                 android:textSize="16sp"
-                android:layout_marginRight="@dimen/button_margin_30"
-                android:text="@string/CONTINUE" />
+                android:fontFamily="@font/proxima_nova_regular"
+                android:layout_height="wrap_content"
+                android:text="What do you think the most popular theory will be?"/>
+            <!--                <EditText-->
+            <!--                    android:id="@+id/et_irs"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="@dimen/default_spacing_10"-->
+            <!--                    style="@style/body_white_1"-->
+            <!--                    android:layout_below="@id/think"-->
+            <!--                    android:padding="@dimen/default_spacing_10"-->
+            <!--                    android:focusable="@null"-->
+            <!--                    android:background="@drawable/et_white"/>-->
+            <AutoCompleteTextView
+                android:id="@+id/auto_tv_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/think"
+                android:dropDownAnchor="@id/view_1"
+                android:layout_marginTop="@dimen/default_spacing_10"
+                android:padding="@dimen/default_spacing_10"
+                android:completionThreshold="1"
+                android:textSize="12sp"
+
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textColor="@color/primary_color_300"
+                android:background="@drawable/et_white" />
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/auto_tv_one"/>
+
 
             <TextView
-                android:id="@+id/usersInSwarmsText"
+                android:id="@+id/tv_consensus"
                 style="@style/body_white_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_20"
                 android:fontFamily="@font/proxima_nova_regular"
-                android:textSize="12sp"
-                android:layout_marginLeft="@dimen/button_margin_30"
-                android:layout_marginRight="@dimen/button_margin_20"
-                android:text="@string/users_in_swarm"/>
-
-            <TextView
-                android:id="@+id/awaitingResponseText"
-                style="@style/body_white_1"
-                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:layout_below="@id/auto_tv_one"
+                android:text="@string/theory"/>
+<!--            <EditText-->
+<!--                android:id="@+id/et_thory"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/default_spacing_10"-->
+<!--                style="@style/body_white_1"-->
+<!--                android:layout_below="@id/tv_consensus"-->
+<!--                android:padding="@dimen/default_spacing_10"-->
+<!--                android:focusable="@null"-->
+<!--                android:background="@drawable/et_white"/>-->
+            <AutoCompleteTextView
+                android:id="@+id/et_thory"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/proxima_nova_regular"
+                android:layout_below="@id/tv_consensus"
+                android:dropDownAnchor="@id/view_2"
+                android:completionThreshold="1"
+                android:layout_marginTop="@dimen/default_spacing_10"
+                android:padding="@dimen/default_spacing_10"
                 android:textSize="12sp"
-                android:layout_marginLeft="@dimen/button_margin_30"
-                android:layout_marginRight="@dimen/button_margin_20"
-                android:text="@string/awaiting_response"/>
-        </LinearLayout>
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textColor="@color/primary_color_300"
+                android:background="@drawable/et_white" />
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/et_thory"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_continue"
+            style="@style/button_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="16sp"
+            android:layout_marginRight="@dimen/button_margin_30"
+            android:text="@string/CONTINUE" />
+
+        <TextView
+            android:id="@+id/usersInSwarmsText"
+            style="@style/body_white_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_20"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="12sp"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:text="@string/users_in_swarm"/>
+
+        <TextView
+            android:id="@+id/awaitingResponseText"
+            style="@style/body_white_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="12sp"
+            android:layout_marginLeft="@dimen/button_margin_30"
+            android:layout_marginRight="@dimen/button_margin_20"
+            android:text="@string/awaiting_response"/>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -192,9 +230,9 @@
         android:backgroundTint="@color/text_color_white_100"
         app:srcCompat="@drawable/icon_chevron_down"
         app:layout_anchor="@id/bar"/>
-<!--    <FrameLayout-->
-<!--        android:id="@+id/container"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-<!--    </FrameLayout>-->
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/container"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+    <!--    </FrameLayout>-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

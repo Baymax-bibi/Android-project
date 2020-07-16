@@ -16,6 +16,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.gabriel.swarmintelligence.Model.CreateGroupModel
 import com.gabriel.swarmintelligence.R
+import com.gabriel.swarmintelligence.Utils.mButter
 import com.gabriel.swarmintelligence.activity_lead.activity_lead_main
 import com.gabriel.swarmintelligence.activity_team.create_username.Create_UserName
 import com.google.android.material.snackbar.Snackbar
@@ -85,7 +86,7 @@ class activity_team_create_team_interrupt  : AppCompatActivity() , View.OnClickL
 
     private fun m_CreateTeam() {
         Log.e("Teamname", et_teamname?.text.toString())
-        Log.e("Token", m_getString(getString(R.string.EntityToken)).toString())
+        Log.e("Token", mButter.EntityToken)
         val queue = Volley.newRequestQueue(this@activity_team_create_team_interrupt)
         val requestBody = "{\n" +
                 "\"GroupName\": \""+ et_teamname?.text.toString() +"\"\n" +
@@ -154,7 +155,7 @@ class activity_team_create_team_interrupt  : AppCompatActivity() , View.OnClickL
                 val params: MutableMap<String, String> =
                     HashMap()
                 params["Content-Type"] = "application/json"
-                params["X-EntityToken"] = m_getString(getString(R.string.EntityToken)).toString()
+                params["X-EntityToken"] = mButter.EntityToken
                 return params
             }
         }

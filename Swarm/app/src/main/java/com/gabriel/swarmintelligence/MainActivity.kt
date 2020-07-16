@@ -19,6 +19,7 @@ import com.android.volley.VolleyLog
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.gabriel.swarmintelligence.Model.AuthModel
+import com.gabriel.swarmintelligence.Utils.mButter
 import com.gabriel.swarmintelligence.activity_lead.activity_lead_main
 import com.gabriel.swarmintelligence.activity_team.create_username.Create_UserName
 import com.google.gson.Gson
@@ -158,12 +159,18 @@ class MainActivity : AppCompatActivity(){
                 val authData_EntityToken_Entity_Id = authData_EntityToken_Entity.Id
                 val authData_EntityToken_Entity_Type = authData_EntityToken_Entity.Type
 
-                m_insertString(getString(R.string.PlayFabId), authData_playFabId)
-                m_insertBoolean(getString(R.string.NewlyCreated), authData_NewlyCreated)
-                m_insertString(getString(R.string.EntityToken), authData_EntityToken_EntityToken)
-                m_insertString(getString(R.string.EntityId), authData_EntityToken_Entity_Id)
-                m_insertString(getString(R.string.EntityType), authData_EntityToken_Entity_Type)
-                m_insertBoolean(getString(R.string.Is_First), true)
+//                m_insertString(getString(R.string.PlayFabId), authData_playFabId)
+//                m_insertBoolean(getString(R.string.NewlyCreated), authData_NewlyCreated)
+//                m_insertString(getString(R.string.EntityToken), authData_EntityToken_EntityToken)
+//                m_insertString(getString(R.string.EntityId), authData_EntityToken_Entity_Id)
+//                m_insertString(getString(R.string.EntityType), authData_EntityToken_Entity_Type)
+//                m_insertBoolean(getString(R.string.Is_First), true)
+
+                mButter.PlayFabId = authData_playFabId
+                mButter.NewlyCreated = authData_NewlyCreated
+                mButter.EntityToken = authData_EntityToken_EntityToken
+                mButter.EntityId = authData_EntityToken_Entity_Id
+                mButter.EntityType = authData_EntityToken_Entity_Type
 
             },
             Response.ErrorListener { error ->
